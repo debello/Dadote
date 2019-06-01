@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>O BICHE</title>
+
+    <style>
+        body {
+            font-family: 'Determination Mono', monospace;
+            background-color: black;
+            color: white;
+            z-index: 9;  
+        }
+        /* Titulo y Subtitulo */
+        h1 {
+            font-size: 120px;
+            
+            word-spacing: 40px;
+        }
+        h1, h2 {
+            text-align: center;
+            display: center;
+        }
+        #welcome-section {
+            height: 100vh;
+        }
+
+    </style>
+    </head>
+
+    <body>
+    <script>
+        // [1] Crear mensaje 'Cargando'
+        let waitMessage = document.createElement("div")
+        let waitNode = document.createTextNode("Cargando... por favor espera")
+        waitMessage.appendChild(waitNode)
+        document.body.appendChild(waitMessage)
+
+        // [2] Quitar mensaje 'Cargando' y mostar la página
+        function quitarLoading() {
+            document.body.removeChild(waitMessage)
+
+            let allthisweb = document.getElementById("all-this-web")
+            allthisweb.style.display = "block";
+        }
+        setTimeout(quitarLoading, 1500);
+
+    </script>
+
+    <div id="all-this-web" style="display:none" async >
+        <div id='welcome-section'>
+            <h1 >sUUUUU O BICHE</h1>
+            <h2 class='hover-1'>Desarrollador Web.</h2>
+            <h2 class='hover-1'>Autodidacta.</h2>
+            <h2 class='hover-2'>* JavaScript</h2>
+            <h2 class='hover-2'>* PHP</h2>
+
+    </div>
+
+</body>
+</html>
